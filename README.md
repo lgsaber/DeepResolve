@@ -13,7 +13,7 @@ This will produce a `importance_map-<L2coeff>-<LearnRate>` file under `<resultdi
 
 Run
 ```
-python OFIV_generation.py <NIV_file_path> <NIV_score_path> <resultdir>
+python OFIV_generation.py <NIV_file_path> <NIV_score_path> <weight_dir> <resultdir>
 ```
 To generate an Overall Feature Importance Map as well as the Inconsistency Level (variance) of each feature channel.
 
