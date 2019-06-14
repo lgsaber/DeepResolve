@@ -17,8 +17,8 @@ def weighted_var(values, weights):
     return (average,variance)
 
 def main():
-    if len(sys.argv) < 3:
-        print "you must call program as: python filtermap.py <method> <rootdir><resultdir><filterfile>"
+    if len(sys.argv) < 5:
+        print "you must call program as: python OFIV_generation.py <NIV_file_path> <NIV_score_path> <weight_dir> <resultdir>"
         sys.exit(1)
     filtermap_dir=sys.argv[1]
     scoremap_dir=sys.argv[2]
