@@ -12,16 +12,15 @@ from os.path import join,dirname,basename,exists
 from os import system
 import os
 
-basedir='/cluster/zeng/research/recomb/generic/saber'#wgEncodeAwgTfbsUwWi38CtcfUniPk/CV0/data'
-#modir='/cluster/zeng/research/recomb/generic/forSirajul/task1'#wgEncodeAwgTfbsUwWi38CtcfUniPk/CV0/128_G/mri-best/best_trial
+basedir='model/422tf/'
 
 def main():
     if len(sys.argv) < 3:
-        print "you must call program as: python filtermap.py <method> <resultdir><rootdir><start><end>"
+        print "you must call program as: python filtermap.py <rootdir> <resultdir>"
         sys.exit(1)
     savename ='deepliftmap_all'
-    method = sys.argv[3]
-    rootdir=sys.argv[1]
+    method = '16_G_'
+    rootdir= sys.argv[1]
     resultdir=sys.argv[2]
     dir_ls=os.listdir(rootdir)
     dir_ls.sort()
