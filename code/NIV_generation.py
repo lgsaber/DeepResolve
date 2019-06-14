@@ -13,8 +13,8 @@ arch='best_archit.json'
 weight='bestmodel_weights.h5'
 
 def main():
-    if len(sys.argv) < 4:
-        print "you must call program as: python get_weights.py <rootpath> <your_archit.json> <your_weights.h5> <resultdir> "
+    if len(sys.argv) < 6:
+        print "you must call program as: python NIV_generation.py <rootpath> <model_file_suffix> <resultdir> <L2_coeff> <Learning_rate>"
         sys.exit(1)
     base = sys.argv[1]
     arc=sys.argv[2]
