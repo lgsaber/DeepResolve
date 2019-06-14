@@ -7,22 +7,22 @@ from os.path import join,dirname,basename,exists
 from os import system
 
 IsAnneal=True
-avg_iter=10
 buff_range=10
-arch='best_archit.json'
-weight='bestmodel_weights.h5'
+arch='.json'
+weight='.h5'
 
 def main():
     if len(sys.argv) < 6:
-        print "you must call program as: python NIV_generation.py <rootpath> <model_file_suffix> <resultdir> <L2_coeff> <Learning_rate>"
+        print "you must call program as: python FIM_generation.py <rootpath> <model_file_prefix> <resultdir> <L2_coeff> <Learning_rate> <Repeat_times>"
         sys.exit(1)
     base = sys.argv[1]
-    arc=sys.argv[2]
-    architecture_file=join(base,arc+arch)
-    weight_file=join(base,arc+weight)
+    prefix=sys.argv[2]
+    architecture_file=join(base,prefix+arch)
+    weight_file=join(base,prefix+weight)
     resultdir=sys.argv[3]
     L2coeff=float(sys.argv[4])
     step=float(sys.argv[5])
+    avg_iter=int(sys.argv[6])
     savename=join(resultdir,arc+'importance_map-fc1-'+str(L2coeff)+'-'+str(step))
     savename2=join(resultdir,arc+'importance_score-'+str(L2coeff)+'-'+str(step))
 
